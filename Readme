@@ -1,0 +1,25 @@
+TECHNICAL DESCRIPTION OF THE PROJECT
+Using the state diagram above, create a state machine. 
+1. Create a new blank VI. 
+2. on the front panel place: 
+• Two text buttons named “5rs” and “10rs” 
+• Text indicator named “Money Deposited” 
+• Boolean indicator named “Dispense coke” 
+3. Place a while loop on the block diagram. 
+4. Place a case structure in the while loop.
+5. Create a shift register on the while loop. 
+6. Create an Enum and wire it to the shift register to initialize it. Right-click the Enum, select Edit Items, and add the following “states”: 
+• Start 
+• 5 cents 
+• 10 cents 
+• Dispense 
+8. Wire the shift register to the conditional input of the case structure. 
+Imagine a vending machine that accepts combinations of nickels and dimes to get a coke. The cost of a coke is 15 cents and the machine does not return change. First, establish the states that the vending machine might be in: 
+• Start: No money inserted 
+• 5 cents 
+• 10 cents 
+• Done: 15 cents 
+From these lists, you see that there are four states and three possible paths from each state. You need to depict which states are connected by which paths. For example, when the vending machine is in the initial start state, the total change inserted is 0 cents. When a nickel is inserted, the vending machine must go to the 5 cent state. Therefore, the start state leads to 
+the 5 cent state by the nickel path. 
+9. Right-click the case box at the top of the case structure and select Add Case for Every Value.
+10. Wire the different cases as depicted in the following figures.
